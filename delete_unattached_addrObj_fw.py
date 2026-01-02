@@ -3,10 +3,10 @@
 OVERVIEW:
 
 This cleanup tool finds address objects and groups that are not attached to any policy on a Palo Alto firewall.
-First, the tool generates a CSV report of the found objects. Then it waits for user confirmation on whether to proceed 
+First, the tool generates a CSV report of the found objects/groups. Then it waits for user confirmation on whether to proceed 
 with the deletion process. If the tool is prompted to proceed, it will delete the objects from the candidate 
-configuration. After review, commits can be made from the GUI. Once the script is done, it will generate an log file for any possible 
-errors.
+configuration. After review, commits to the running configuration can be made from the GUI. Once the script is done, 
+it will generate a log file for any possible errors.
 
 
 
