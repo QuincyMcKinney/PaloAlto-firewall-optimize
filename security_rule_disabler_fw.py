@@ -1,29 +1,29 @@
 #!/usr/bin/env python3
 """
+OVERVIEW:
+
 This is a Palo Alto firewall hygiene script that disables security rule data. The script takes inputs from a CSV file generated from the Palo Alto Policy Optimizer tool.
 
-User Guide:
-1. Generate a CSV file from the using the Policy Optimizer tool, with headers matching this structre:
- - Rule UUID
- - Name
- - Tags 
- - Source Zone
- - Source Address
- - Destination Zone
- - Destination Address
- - Action
- - Rule Usage Hit Count
- - Rule Usage Last Hit
- - Rule Usage First Hit
- - Rule Usage Reset Date
- - Modified
- - Created
-2. Move downloaded file to the same directory of the script
-3. Run the script and specify user configuration variables
+FEATURES:
 
-Features:
-- Logs progress to the console and generates a report of the disabled rules to a CSV file 
-- Rate limits the number of API calls writen to the firewall, this helps prevent overloading the firewall CPU.
+Python side:
+- User configuration prompts: firewall mgmt IP/hostname, username, password (getpass), CSV path
+- Assumes default vsys1
+- Reads Policy Optimizer/exports that include a "Name" column
+- De-duplicates rule names, strips optional "[Disabled]" prefix
+- Console + file logging
+- User-configurable rate limiting for WRITE calls (set operations)
+- Generates a CSV results report
+- Candidate-config only (NO commit)
+
+PAN-OS side:
+- Uses pan-os-python SDK only (Firewall + xapi)
+- Reads security rules from candidate config via XPath:
+    /config/devices/entry[@name='<device>']/vsys/entry[@name='vsys1']/rulebase/security/rules
+- Disables by setting <disabled>yes</disabled> on the rule entry
+
+CSV requirements:
+- Must contain a header column "Name" (case-insensitive)
 
 Minimum Software Requirements:
 - Python 3.9.5
