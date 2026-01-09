@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-This is a Palo Alto firewall hygiene script that disables security rule data. The script take inputs from a CSV file generated from the Palo Alto Policy Optimizer tool.
+This is a Palo Alto firewall hygiene script that disables security rule data. The script takes inputs from a CSV file generated from the Palo Alto Policy Optimizer tool.
 
 User Guide:
 1. Generate a CSV file from the using the Policy Optimizer tool, with headers matching this structre:
