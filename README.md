@@ -1,2 +1,2 @@
 # PaloAlto-firewall-optimize
-This repo is for Palo Alto standalone firewall optimization scripts
+This is a collection of Palo Alto firewall hygiene scripts. All scripts inlcude console logging, rate limiting, and post-run CSV report.
