@@ -2,7 +2,7 @@
 """
 OVERVIEW:
 
-This is a Palo Alto firewall hygiene script that disables security rule data. The script takes inputs from a CSV file generated from the Palo Alto Policy Optimizer tool.
+This is a Palo Alto firewall hygiene script that disables security rules. The script takes inputs from a CSV file generated from the Palo Alto Policy Optimizer tool.
 
 FEATURES:
 
