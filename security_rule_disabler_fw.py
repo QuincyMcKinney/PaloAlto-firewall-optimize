@@ -22,8 +22,8 @@ User Guide:
 3. Run the script and specify user configuration variables
 
 Features:
-- Logs progress to the console and generates a report of the disabled rules a CSV file 
-- Rate limits the number of API writen to the Panorama, this helps prevent overloading the firewall CPU
+- Logs progress to the console and generates a report of the disabled rules to a CSV file 
+- Rate limits the number of API calls writen to the firewall, this helps prevent overloading the firewall CPU.
 
 Minimum Software Requirements:
 - Python 3.9.5
